@@ -25,7 +25,7 @@ Official Website of GDCMEC MEC.
 
 ```bash
 git clone https://github.com/{your_github_username}/gdcweb.git
-cd gdcweb
+cd GDC-Website
 npm install
 npm start
 ```
