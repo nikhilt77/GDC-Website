@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div id = "nav" className="w-screen h-[60px] flex items-center justify-between py-3 fixed top-0 px-5 " style={{ zIndex: navZIndex }}>
+    <div id = "nav" className="w-screen h-[60px] flex items-center justify-between py-3 fixed top-0 px-5 " >
       
       <button id = "ham" onClick={handleHamburger} className="text-white text-3xl absolute right-0 top-0 bg-black block md:hidden mr-3 shadow-md">
         {mobilenav ?  <TfiAlignRight color='gold' size= '25px'/>: <RxCross1 color='gold' size= '25px' />}
