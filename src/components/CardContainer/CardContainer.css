@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'pacfont';
+    src: local('Pacfont'), url('../../assets/fonts/MonumentExtended/PAC-FONT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .events-heading {
+    font-family: 'Pacfont', sans-serif;
+  }
+  

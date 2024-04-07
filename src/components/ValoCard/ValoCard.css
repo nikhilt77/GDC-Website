@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #d53a49;
+  --primary-color: gold;
   --secondary-color: #0d111a;
 }
 *,
@@ -59,6 +59,13 @@ body {
   z-index: 2;
   background: var(--secondary-color);
   filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.3));
+}
+
+.effect-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add this line to add a box-shadow */
 }
 
 .gaming-card:hover .card-content {
@@ -128,28 +135,42 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;  
+  gap: 1rem;
   /* transition-delay: 0.3s; */
 }
+
+@media (hover: hover) {
+  .gaming-card:hover .card-content {
+    transform: translateY(calc(var(--pos) * -6.6));
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+  }
+  .gaming-card:hover .card-content h2 {
+    font-size: 15px;
+  }
+  .gaming-card:hover .status-report {
+    display: none;
+  }
+  .gaming-card:hover .card-footer {
+    visibility: visible;
+    top: 60px;
+  }
+}
+
 
 /* .card-footer button {
   width: 10rem;
   background: black;
   padding: 0.7rem 1rem;
 } */
-/* 
-.card-footer button:hover {
-  shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-} */
 
-.card-footer p {
-  padding: 0px 16px;
-}
+/* .card-footer button:hover {
+  shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}  */
+
 :root {
   --background-color: #0f192300;
 }
-
-
 
 .btn {
   /* Clean style */
@@ -163,23 +184,23 @@ body {
   cursor: pointer;
   z-index: 3;
   /* Clean style */
-  
+
   --button-text-color: #0f1923;
   --button-text-color-hover: var(--button-background-color);
-  --border-color: #7D8082;
+  --border-color: #7d8082;
   --button-background-color: #ece8e1;
   --highlight-color: #ff4655;
   --button-inner-border-color: transparent;
   --button-bits-color: var(--background-color);
   --button-bits-color-hover: var(--button-background-color);
-  
+
   position: relative;
   padding: 8px;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
-  transition: all .15s ease;
+  transition: all 0.15s ease;
 }
 
 .btn::before,
@@ -187,10 +208,11 @@ body {
   content: '';
   display: block;
   position: absolute;
-  right: 0; left: 0;
+  right: 0;
+  left: 0;
   height: calc(50% - 5px);
   border: 1px solid var(--border-color);
-  transition: all .001s ease;
+  transition: all 0.001s ease;
 }
 
 .btn::before {
@@ -235,7 +257,8 @@ body {
   content: '';
   display: block;
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 2px;
   height: 2px;
   background-color: var(--button-bits-color);
@@ -245,21 +268,24 @@ body {
   content: '';
   display: block;
   position: absolute;
-  right: 0; bottom: 0;
+  right: 0;
+  bottom: 0;
   width: 4px;
   height: 4px;
   background-color: var(--button-bits-color);
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn__slide {
   display: block;
   position: absolute;
-  top: 0; bottom: -1px; left: -8px;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
   width: 0;
   background-color: var(--highlight-color);
   transform: skew(-15deg);
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn__content {
@@ -269,7 +295,6 @@ body {
 .btn:hover {
   color: var(--button-text-color-hover);
   cursor: pointer;
-  
 }
 
 .btn:hover .btn__slide {

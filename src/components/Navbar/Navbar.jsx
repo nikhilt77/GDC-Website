@@ -10,13 +10,15 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [mobilenav, setmobilenav] = useState(true);
+  const [navZIndex, setNavZIndex] = useState(3); // Initial z-index
 
   const handleHamburger = () => {
     setmobilenav(!mobilenav);
+    setNavZIndex(mobilenav ? 4 : 0); // Increase z-index when menu is open
   };
 
   return (
-    <div id = "nav" className="w-screen h-[60px] flex items-center justify-between py-3 fixed top-0 z-[3] px-5">
+    <div id = "nav" className="w-screen h-[60px] flex items-center justify-between py-3 fixed top-0 px-5 " style={{ zIndex: navZIndex }}>
       
       <button id = "ham" onClick={handleHamburger} className="text-white text-3xl absolute right-0 top-0 bg-black block md:hidden mr-3 shadow-md">
         {mobilenav ?  <TfiAlignRight color='gold' size= '25px'/>: <RxCross1 color='gold' size= '25px' />}
