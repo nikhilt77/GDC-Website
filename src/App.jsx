@@ -15,7 +15,7 @@ import { NintendoMob } from './components/NintendoMob/NintendoMob';
 import { Responsivehook1 } from './components/ResponsiveHook';
 import ValoCard from './components/ValoCard/ValoCard';
 import CardContainer from './components/CardContainer/CardContainer';
-
+import Events from './components/Events/Events';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -75,6 +75,9 @@ function App() {
           <AnimatePresence>
             <section id = "home">
               <Landing/>
+            </section>
+            <section id = "events">
+              <Events />
             </section>
           </AnimatePresence>
         </BrowserRouter>
