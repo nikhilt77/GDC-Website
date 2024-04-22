@@ -1,0 +1,136 @@
+.Main{
+  background-image: url("./Frame_1.png");
+  background-color: #2f2f2e;
+  width:100vw;
+  height:100vh;
+  box-sizing: border-box;
+  display:flex;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.About{
+  width:80%;
+  height:50%;
+  border-radius:25px;
+  background-image: url("./bg.png");
+  background-size: cover;
+  display: flex;
+  color:white;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  font-size: 22px;
+  padding:0 60px;
+  box-sizing: border-box;
+}
+.About h2{
+  color:#FFBC00;
+  font-size: 36px;
+}
+.Nav{
+  width:95%;
+  height:auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2f2f2e;  
+  color:white;
+}
+.Nav img{
+  width: 106px;
+  height: 90px;
+}
+.Nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  list-style: none;
+  font-size: 22px;
+  padding:0%;
+}
+.Nav h5{
+  font-size: 25px;
+  margin:0%;
+  padding:0%;
+}
+.Nav a{
+  text-decoration: none;
+  color: white;
+}
+.QuickLinks,.Contact{
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.Main p{
+  color:white;
+}
+.Main p a{
+  color:white;
+}
+@media (max-width: 768px) {
+  .Main{
+    flex-direction: column;
+  }
+  .About{
+    width: 90%;
+    height: 70%;
+    padding: 0 20px;
+  }
+  .Nav{
+    width: 100%;
+    padding: 10px;
+  }
+  .Nav img{
+    width: 80px;
+    height: 70px;
+  }
+  .Nav ul{
+    font-size: 18px;
+  }
+  .Nav h5{
+    font-size: 20px;
+  }
+  .About h2{
+    font-size: 30px;
+  }
+  .Main p{
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .Main{
+    flex-direction: column;
+  }
+  .About{
+    width: 90%;
+    height: 70%;
+    padding: 0 20px;
+  }
+  .Nav{
+    width: 100%;
+    padding: 10px;
+  }
+  .Nav img{
+    width: 80px;
+    height: 70px;
+  }
+  .Nav ul{
+    font-size: 18px;
+  }
+  .Nav h5{
+    font-size: 20px;
+  }
+  .About h2{
+    font-size: 30px;
+  }
+  .Main p{
+    font-size: 18px;
+  }
+}
