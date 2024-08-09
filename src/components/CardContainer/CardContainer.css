@@ -8,4 +8,8 @@
   .events-heading {
     font-family: 'Pacfont', sans-serif;
   }
+
+  #card{
+    z-index: 5;
+  }
   
